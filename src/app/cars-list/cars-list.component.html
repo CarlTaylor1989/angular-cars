@@ -1,0 +1,20 @@
+<div class="container">
+  <span *ngIf="shouldDisplay; then condition1 else condition2"></span>
+  <ng-template #condition1>
+    <div class="no-data text-center">
+      <p>There are no cars!</p>
+    </div>
+  </ng-template>
+  <ng-template #condition2>
+    <div class="row no-gutters">
+      <div class="col-12 col-lg col-sm-6" *ngFor="let car of newCars">
+        <img src="assets{{ car.media[0].url }}" alt="{{ car.media[0].name }}" />
+        <div class="content">
+          <h2 class="vehicle-name">{{ car.id | uppercase }} {{ car.modelYear | uppercase }}</h2>
+          <p class="price">From {{ car.price }}</p>
+          <p class="desc">{{ car.description }}</p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

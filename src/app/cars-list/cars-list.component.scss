@@ -1,0 +1,28 @@
+$grey: #989C9F;
+$alt-black: #0B111C;
+
+img {
+  width: 100%;
+}
+
+.content {
+  padding: 30px 10px 10px;
+  text-align: center;
+  .vehicle-name {
+    display: inline;
+    font-size: 28px;
+    border-top: 2px solid $alt-black;
+    border-bottom: 2px solid $alt-black;
+    color: $alt-black;
+  }
+  .price {
+    font-size: 14px;
+    margin: 10px 0;
+    color: grey;
+  }
+  .desc {
+    font-size: 14px;
+    line-height: 1.2;
+    color: $grey;
+  }
+}
